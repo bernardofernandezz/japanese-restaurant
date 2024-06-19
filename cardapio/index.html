@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,18 +13,17 @@
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Restaurant Menu</title>
+    <title>SushiBar | Menu</title>
   </head>
 
   <body>
 
-  
     <main class="container">
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Menu')">Menu</button>
-            <button class="tablinks" onclick="openTab(event, 'Cart')">Carrinho</button>
-        </div>
       <div class="menu">
+        <div class="menutext">
+        <h1>Cardápio do Restaurante 🍣</h1>
+    <p>Confira nossas deliciosas opções!</p>
+  </div>
         <h2 class="menu-group-heading">Entrada</h2>
         <div class="menu-group">
           <div class="menu-item">
@@ -88,6 +87,7 @@
                 scelerisque. Fusce orci risus, congue eu mauris nec, pretium
                 tincidunt nulla.
               </p>
+            </div>
             </div>
           </div>
         </div>
@@ -160,12 +160,47 @@
               <div id="Cart" class="tabcontent">
                 <h3>Carrinho</h3>
                 <div id="cartItems"></div>
+
+                <footer class="top">
+                  <img src="logo.svg" />
+                  <div class="links">
+                    <div>
+                      <h2>Platform</h2>
+                      <a>Directus Core</a>
+                      <a>Open Data Platform</a>
+                      <a>Feature List</a>
+                      <a>Road Map</a>
+                      <a>Marketplace</a>
+                    </div>
+                    <div>
+                      <h2>Cloud</h2>
+                      <a>Dashboard</a>
+                      <a>Register</a>
+                      <a>Pricing</a>
+                      <a>System Status</a>
+                      <a>Partner Program</a>
+                    </div>
+                  </div>
+                </footer>
+                <footer class="bottom">
+                  <div class="legal">
+                    <span> © 2023 All rights reserved </span>
+                    <a> License </a>
+                    <a> Terms </a>
+                    <a> Privacy </a>
+                  </div>
+                  <div class="links">
+                    <a class="fa-brands fa-github"></a>
+                    <a class="fa-brands fa-linkedin"></a>
+                    <a class="fa-brands fa-docker"></a>
+                  </div>
+                </footer>
             </div>
           </div>
         </div>
       </div>
     </main>
 </div>
-    <script src="./src/app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
