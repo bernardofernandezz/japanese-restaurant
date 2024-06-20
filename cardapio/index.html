@@ -18,6 +18,20 @@
 
   <body>
 
+    <header>
+      <nav class="menu">
+        <ul>
+          <li><a href="../mainpage/index.html">Inicio</a></li>
+          <li><a href="../cardapio/index.html">Cardápio</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">FeedBack</a></li>
+          <li><a href="#" onclick="openNav()"><ion-icon size="large" name="cart-outline"></ion-icon></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
     <main class="container">
       <div class="menu">
         <div class="menutext">
@@ -36,7 +50,7 @@
               <h3 class="menu-item-heading">
                 <span class="menu-item-name">Gyozas</span>
                 <span class="menu-item-price">$12.90</span>
-                <button onclick="addToCart('Gyozas')">
+                <button class="add-to-cart-btn" data-product-name="Gyozas" data-product-price="12.90">
                   Adicionar ao carrinho
                 </button>
               </h3>
@@ -57,7 +71,7 @@
               <h3 class="menu-item-heading">
                 <span class="menu-item-name">Sunomono</span>
                 <span class="menu-item-price">$12.90</span>
-                <button onclick="addToCart('Sunomono')">
+                <button class="add-to-cart-btn" data-product-name="Sunomono" data-product-price="12.90">
                   Adicionar ao carrinho
                 </button>
               </h3>
@@ -78,7 +92,7 @@
               <h3 class="menu-item-heading">
                 <span class="menu-item-name">Temaki</span>
                 <span class="menu-item-price">$12.90</span>
-                <button onclick="addToCart('Temaki')">
+                <button class="add-to-cart-btn" data-product-name="Temaki" data-product-price="12.90">
                   Adicionar ao carrinho
                 </button>
               </h3>
@@ -105,7 +119,7 @@
               <h3 class="menu-item-heading">
                 <span class="menu-item-name">Uramaki</span>
                 <span class="menu-item-price">$12.90</span>
-                <button onclick="addToCart('Uramaki')">
+                <button class="add-to-cart-btn" data-product-name="Uramaki" data-product-price="12.90">
                   Adicionar ao carrinho
                 </button>
               </h3>
@@ -126,7 +140,7 @@
               <h3 class="menu-item-heading">
                 <span class="menu-item-name">Ramem</span>
                 <span class="menu-item-price">$12.90</span>
-                <button onclick="addToCart('Ramem')">
+                <button class="add-to-cart-btn" data-product-name="Ramem" data-product-price="12.90">
                   Adicionar ao carrinho
                 </button>
               </h3>
@@ -147,7 +161,7 @@
               <h3 class="menu-item-heading">
                 <span class="menu-item-name">Hot Roll</span>
                 <span class="menu-item-price">$12.90</span>
-                <button onclick="addToCart('Hot Roll')">
+                <button class="add-to-cart-btn" data-product-name="Hot Roll" data-product-price="12.90">
                   Adicionar ao carrinho
                 </button>
               </h3>
@@ -156,51 +170,27 @@
                 scelerisque. Fusce orci risus, congue eu mauris nec, pretium
                 tincidunt nulla.
               </p>
-
-              <div id="Cart" class="tabcontent">
-                <h3>Carrinho</h3>
-                <div id="cartItems"></div>
-
-                <footer class="top">
-                  <img src="logo.svg" />
-                  <div class="links">
-                    <div>
-                      <h2>Platform</h2>
-                      <a>Directus Core</a>
-                      <a>Open Data Platform</a>
-                      <a>Feature List</a>
-                      <a>Road Map</a>
-                      <a>Marketplace</a>
-                    </div>
-                    <div>
-                      <h2>Cloud</h2>
-                      <a>Dashboard</a>
-                      <a>Register</a>
-                      <a>Pricing</a>
-                      <a>System Status</a>
-                      <a>Partner Program</a>
-                    </div>
-                  </div>
-                </footer>
-                <footer class="bottom">
-                  <div class="legal">
-                    <span> © 2023 All rights reserved </span>
-                    <a> License </a>
-                    <a> Terms </a>
-                    <a> Privacy </a>
-                  </div>
-                  <div class="links">
-                    <a class="fa-brands fa-github"></a>
-                    <a class="fa-brands fa-linkedin"></a>
-                    <a class="fa-brands fa-docker"></a>
-                  </div>
-                </footer>
+              
             </div>
           </div>
         </div>
       </div>
+      <div id="sidebar" class="sidebar">
+        <div id='cart-items' class="sidebar-content">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <h2>Carrinho</h2>
+            <p>Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+          <p>Total: R$<span id="cart-total">0.00</span></p>
+          <button id="clear-cart-btn">Remover Todos</button>
+          <button id="checkout-btn">Finalizar Compra</button>
+      </div>
+    </div>
     </main>
 </div>
-    <script src="./app.js"></script>
+    <script src="./main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
