@@ -2,12 +2,44 @@
 
 // Função para abrir a aba lateral
 function openSidebar() {
-  document.getElementById("sidebar").classList.add("active");
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.add("active");
+
+  // Ajuste para dispositivos móveis
+  if (window.innerWidth <= 320 || window.innerWidth <= 768) {
+    sidebar.style.width = "100%";
+  } else {
+    sidebar.style.width = "300px";
+  }
 }
 
 // Função para fechar a aba lateral
 function closeSidebar() {
   document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("sidebar").style.width = "0";
+}
+
+const sidebar = document.getElementById("sidebar");
+
+let startWidth = 0;
+let currentWidth = 0;
+
+sidebar.addEventListener("mousedown", (event) => {
+  startWidth = sidebar.offsetWidth;
+  currentWidth = startWidth;
+
+  document.addEventListener("mousemove", handleMouseMove);
+  document.addEventListener("mouseup", handleMouseUp);
+});
+
+function handleMouseMove(event) {
+  const newWidth = startWidth + (event.clientX - event.offsetX);
+  sidebar.style.width = `${newWidth}px`;
+}
+
+function handleMouseUp() {
+  document.removeEventListener("mousemove", handleMouseMove);
+  document.removeEventListener("mouseup", handleMouseUp);
 }
 
 // Função para calcular o total do carrinho
@@ -88,6 +120,7 @@ function updateTotalPrice(event) {
   calculateCartTotal();
 }
 function addEmptyMessage(cartItems) {
+  console.log("cartitems:91", cartItems);
   cartItems.innerHTML = '<p id="emptycart">Seu carrinho está vazio.</p>';
 }
 
@@ -109,6 +142,7 @@ function removeCartItem(event) {
 // Função para remover todos os itens do carrinho
 function clearCart() {
   const cartItems = document.getElementById("cart-items");
+  console.log("cartitems:112", cartItems);
   addEmptyMessage(cartItems);
   // Atualizar o total do carrinho
   calculateCartTotal();

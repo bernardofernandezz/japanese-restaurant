@@ -25,7 +25,6 @@
           <li><a href="../cardapio/index.html">Cardápio</a></li>
           <li><a href="#">Contato</a></li>
           <li><a href="#">FeedBack</a></li>
-          <li><a href="#" onclick="openNav()"><ion-icon size="large" name="cart-outline"></ion-icon></a></li>
         </ul>
       </nav>
     </div>
@@ -176,9 +175,11 @@
         </div>
       </div>
       <div id="sidebar" class="sidebar">
+        <div class="cart-header">
+          <span id="close-btn" class="close-btn">&times;</span>
+          <h2>Carrinho</h2>
+        </div>
         <div id='cart-items' class="sidebar-content">
-            <span id="close-btn" class="close-btn">&times;</span>
-            <h2>Carrinho</h2>
             <p id="emptycart">Seu carrinho está vazio.</p>
         </div>
         <div class="cart-footer">
@@ -186,7 +187,9 @@
           <button id="clear-cart-btn">Remover Todos</button>
           <button id="checkout-btn">Finalizar Compra</button>
       </div>
+      <div class="resize-handle" id="resize-handle"></div>
     </div>
+    
     </main>
 </div>
     <script src="./main.js"></script>

@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Source Sans Pro", "Poppins", sans-serif;
   animation: appear 1s backwards;
+  padding: 0;
 }
 body {
   /* background: #333; */
@@ -32,6 +33,10 @@ header > .menu {
 }
 .menu ul li {
   list-style: none;
+  padding: 5px;
+}
+li + li {
+  margin-left: 10px;
 }
 .menu ul li a {
   color: rgb(8, 8, 8);
@@ -206,6 +211,11 @@ p {
   animation-delay: 0.2s;
 }
 
+#sidebar > .cart-header h2 {
+  padding: 1.1rem;
+  margin-bottom: 0;
+}
+
 .sidebar p {
   animation-delay: 0.2s;
 }
@@ -276,12 +286,6 @@ button {
   }
 }
 
-/* styles.css */
-
-body {
-  font-family: Arial, sans-serif;
-}
-
 .add-to-cart-btn {
   padding: 10px 20px;
   font-size: 16px;
@@ -304,7 +308,7 @@ body {
 }
 
 .sidebar-content {
-  padding: 20px;
+  padding-left: 10px;
 }
 
 .close-btn {
@@ -340,4 +344,37 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+/* Estilo para a barra de redimensionamento */
+.resize-handle {
+  width: 10px;
+  background-color: #444;
+  cursor: ew-resize;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 320px) {
+  .sidebar {
+    max-width: 30%;
+  }
+
+  .close-btn {
+    font-size: 28px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    max-width: 30%;
+  }
+
+  .close-btn {
+    font-size: 32px;
+    right: 20px;
+  }
 }
