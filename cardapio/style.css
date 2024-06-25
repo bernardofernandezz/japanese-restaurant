@@ -198,10 +198,25 @@ p {
   animation-delay: 0.8s;
 }
 
+#emptycart {
+  animation-delay: 0.2s;
+}
+
+.cart-items {
+  animation-delay: 0.2s;
+}
+
+.sidebar p {
+  animation-delay: 0.2s;
+}
+
 a {
   animation-delay: 1.6s;
 }
-
+.item {
+  display: flex;
+  justify-content: space-between;
+}
 button {
   animation-delay: 0.2s;
 }

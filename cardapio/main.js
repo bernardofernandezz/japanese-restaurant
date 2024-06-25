@@ -48,7 +48,7 @@ function addToCart(event) {
     cartItem.setAttribute("data-product-name", productName);
     cartItem.setAttribute("data-product-price", productPrice);
     cartItem.innerHTML = `
-            <p>${productName} - R$<span class="total-price">${productPrice.toFixed(
+            <p class=\"item\">${productName} - R$<span class="total-price">${productPrice.toFixed(
       2
     )}</span>
             <input type="number" class="quantity-input" value="1" min="1" data-product-price="${productPrice.toFixed(
@@ -58,7 +58,7 @@ function addToCart(event) {
         `;
 
     // Adicionar o item ao carrinho
-    const emptyMessage = cartItems?.querySelector("p");
+    const emptyMessage = document.getElementById("emptycart");
     if (emptyMessage) {
       emptyMessage.remove();
     }
@@ -87,6 +87,9 @@ function updateTotalPrice(event) {
   // Atualizar o total do carrinho
   calculateCartTotal();
 }
+function addEmptyMessage(cartItems) {
+  cartItems.innerHTML = '<p id="emptycart">Seu carrinho está vazio.</p>';
+}
 
 // Função para remover um item do carrinho
 function removeCartItem(event) {
@@ -96,17 +99,17 @@ function removeCartItem(event) {
   // Verificar se o carrinho está vazio e exibir a mensagem apropriada
   const cartItems = document.getElementById("cart-items");
   if (cartItems.children.length === 0) {
-    cartItems.innerHTML = "<p>Seu carrinho está vazio.</p>";
+    addEmptyMessage(cartItems);
   }
 
   // Atualizar o total do carrinho
   calculateCartTotal();
 }
+
 // Função para remover todos os itens do carrinho
 function clearCart() {
   const cartItems = document.getElementById("cart-items");
-  cartItems.innerHTML = "<p>Seu carrinho está vazio.</p>";
-
+  addEmptyMessage(cartItems);
   // Atualizar o total do carrinho
   calculateCartTotal();
 }
