@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="light">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,11 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./style.css" />
     <title>SushiBar | Menu</title>
   </head>
@@ -25,6 +30,8 @@
           <li><a href="../cardapio/index.html">Cardápio</a></li>
           <li><a href="#">Contato</a></li>
           <li><a href="#">FeedBack</a></li>
+          <li class="icon" onclick="openSidebar()" role="button"><a href="#" class="notification"><ion-icon class="cart-icon" name="cart-outline"></ion-icon>
+          <span class="badge hidden" id="quantity-item"></span></a></li>
         </ul>
       </nav>
     </div>
@@ -185,7 +192,14 @@
         <div class="cart-footer">
           <p>Total: R$<span id="cart-total">0.00</span></p>
           <button id="clear-cart-btn">Remover Todos</button>
-          <button id="checkout-btn">Finalizar Compra</button>
+          <button id="checkout-btn" onclick="showCustomAlert()">Finalizar Compra</button>
+          <div id="custom-alert" class="custom-alert hidden">
+            <div class="custom-alert-content">
+              <span class="btn-close" onclick="closeCustomAlert()">&times;</span>
+              <p>Compra Finalizada!</p>
+              <button onclick="closeCustomAlert()">Fechar</button>
+            </div>
+          </div>
       </div>
       <div class="resize-handle" id="resize-handle"></div>
     </div>
