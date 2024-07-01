@@ -65,28 +65,31 @@
 
         </div>
 
-        <div class="contact-content">
+        <div class="contact-form">
             <h1>Contato</h1>
-
             <div class="form-content">
-                <form action="/submit" method="post">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required><br><br>
-
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" required><br><br>
-
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" required><br><br>
-
-                    <input type="submit" value="Enviar">
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+        
+                    <button type="submit">Submit</button>
                 </form>
+                <div id="successMessage" class="hidden">Thank you for contacting us!</div>
+                <div id="errorMessage" class="hidden">There was an error submitting the form. Please try again.</div>
+            </div>
             </div>
         </div>
 
         <h1></h1>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./script.js"></script>
 </body>
 
 </html>
