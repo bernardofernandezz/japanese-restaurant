@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #3c3c3c;
+}
+
+header > .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 1.25rem;
+  font-size: 1.15rem;
+}
+.menu ul li a:hover {
+  color: #ff5563;
+  opacity: 0.5s;
+}
+.menu ul {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.menu ul li {
+  list-style: none;
+}
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bg-image {
+  background-image: url("https://www.djapa.com.br/wp-content/uploads/2023/01/delivery-japones.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  opacity: 0.3;
+}
+.contact-box {
+  display: flex;
+}
+.form-content {
+  background-color: wheat;
+  width: 710px;
+  height: 627px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-ways {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-items {
+  background-color: whitesmoke;
+  width: 245px;
+  height: 271px;
+}
