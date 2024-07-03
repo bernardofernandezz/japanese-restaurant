@@ -125,7 +125,9 @@ button:hover {
 .hidden {
   display: none;
 }
-
+.visible {
+  display: block;
+}
 #successMessage,
 #errorMessage {
   margin-top: 20px;

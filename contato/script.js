@@ -20,3 +20,28 @@ document
       document.getElementById("errorMessage").classList.remove("hidden");
     }
   });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    if (name && email && message) {
+      document.getElementById("successMessage").classList.remove("hidden");
+      document.getElementById("successMessage").classList.add("visible");
+      document.getElementById("errorMessage").classList.remove("visible");
+      document.getElementById("errorMessage").classList.add("hidden");
+
+      // Clear the form fields
+      document.getElementById("contactForm").reset();
+    } else {
+      document.getElementById("successMessage").classList.remove("visible");
+      document.getElementById("successMessage").classList.add("hidden");
+      document.getElementById("errorMessage").classList.remove("hidden");
+      document.getElementById("errorMessage").classList.add("visible");
+    }
+  });
