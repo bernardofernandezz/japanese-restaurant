@@ -146,3 +146,41 @@ button:hover {
 label {
   margin: 5px;
 }
+
+h1,
+p,
+a {
+  animation: appear 1s backwards;
+}
+
+.contact-form {
+  animation: appear 1s backwards;
+}
+
+h1 {
+  animation-delay: 0.2s;
+}
+
+p {
+  animation-delay: 0.8s;
+}
+
+a {
+  animation-delay: 1.6s;
+}
+.contact-form {
+  animation-delay: 0.5s;
+  background-color: rgba(245, 222, 179, 0.8);
+}
+/*
+@media (width < 40rem) {
+  html {
+    font-size: 70%;
+  }
+}
+*/
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+}

@@ -45,3 +45,17 @@ document
       document.getElementById("errorMessage").classList.add("visible");
     }
   });
+
+// Script para fechar o modal
+var modal = document.getElementById("successModal");
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
