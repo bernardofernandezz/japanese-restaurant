@@ -30,14 +30,11 @@ document
     var message = document.getElementById("message").value;
 
     if (name && email && message) {
-      document.getElementById("successMessage").classList.remove("hidden");
-      document.getElementById("successMessage").classList.add("visible");
-
+      document.getElementById("modalMessage").textContent =
+        document.getElementById("successMessage").textContent;
+      document.getElementById("successModal").style.display = "block";
       // Clear the form fields
       document.getElementById("contactForm").reset();
-    } else {
-      document.getElementById("successMessage").classList.remove("visible");
-      document.getElementById("successMessage").classList.add("hidden");
     }
   });
 
@@ -54,3 +51,11 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+// Mostrar popup ao enviar formulário
+function showCustomAlert() {
+  document.getElementById("custom-alert").classList.remove("hidden");
+}
+// Fechar popup do formulário
+function closeCustomAlert() {
+  document.getElementById("custom-alert").classList.add("hidden");
+}

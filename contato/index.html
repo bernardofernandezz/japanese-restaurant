@@ -80,7 +80,12 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
         
-                    <button id="submit" type="submit">Submit</button>
+                    <button id="submit" onclick="showCustomAlert()">Submit</button>
+                    <div id="custom-alert" class="custom-alert hidden">
+                        <div class="custom-alert-content">
+                          <span class="btn-close" onclick="closeCustomAlert()">&times;</span>
+                          <p>Obrigado pelo FeedBack!</p>
+                          <button id="closeSubmit"onclick="closeCustomAlert()">Fechar</button>
                 </form>
                 <div id="successMessage" class="hidden">Thank you for contacting us!</div>
                 <!-- Popup Modal -->
