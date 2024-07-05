@@ -185,7 +185,7 @@ a {
 
 footer {
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-container {
@@ -257,6 +257,9 @@ ul {
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #ffffff;
+}
+.footer-col .social-links p {
+  color: white;
 }
 
 /*responsive*/
