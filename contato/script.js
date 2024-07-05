@@ -3,21 +3,20 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var subject = document.getElementById("subject").value;
-    var message = document.getElementById("message").value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let submit = document.getElementById("submit").value;
+    let message = document.getElementById("message").value;
 
-    if (name && email && subject && message) {
+    if (name && email && submit && message) {
       // Simulate form submission
       setTimeout(function () {
         document.getElementById("successMessage").classList.remove("hidden");
-        document.getElementById("errorMessage").classList.add("hidden");
         document.getElementById("contactForm").reset();
       }, 1000);
     } else {
       document.getElementById("successMessage").classList.add("hidden");
-      document.getElementById("errorMessage").classList.remove("hidden");
+      console.log("contactform", contactForm);
     }
   });
 
@@ -33,16 +32,12 @@ document
     if (name && email && message) {
       document.getElementById("successMessage").classList.remove("hidden");
       document.getElementById("successMessage").classList.add("visible");
-      document.getElementById("errorMessage").classList.remove("visible");
-      document.getElementById("errorMessage").classList.add("hidden");
 
       // Clear the form fields
       document.getElementById("contactForm").reset();
     } else {
       document.getElementById("successMessage").classList.remove("visible");
       document.getElementById("successMessage").classList.add("hidden");
-      document.getElementById("errorMessage").classList.remove("hidden");
-      document.getElementById("errorMessage").classList.add("visible");
     }
   });
 
