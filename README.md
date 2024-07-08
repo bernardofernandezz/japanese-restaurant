@@ -1,5 +1,5 @@
 <h1 color="white"><a href="https://bernardofernandezz.github.io/sushibar/" target="_blank">SushiBar | Landing Page</a></h1>
-----------------------------------------
+
 In this project, an E-commerce landing page was created for SushiBar.
 
 In it you will find:
