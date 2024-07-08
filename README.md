@@ -8,9 +8,11 @@ In it you will find:
 - Contact page for questions and feedback.
 -------------------------------------------------- -------------
 <h2>Technologies Used</h2>
--HTML
--CSS
--JavaScript.
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
 
 ---------------------------------------------------------------
 <h2>Project Images</h2>
