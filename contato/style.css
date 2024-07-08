@@ -275,6 +275,15 @@ ul {
   }
 }
 
+@media (max-width: 320px) {
+  .form-content {
+    max-width: 250px;
+  }
+  .contact-form {
+    max-width: 300px;
+  }
+}
+
 .custom-alert {
   position: fixed;
   top: 0;
